@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   render() {
+    let baseImgURL = "https://image.tmdb.org/t/p/w185_and_h278_bestv2"
     return (
       <div className="App">
         <header className="App-header">
@@ -29,7 +30,7 @@ class App extends Component {
           <ul>
             {this.state.movie.map(movies =>
               <div>
-                <li> {movies.backdrop_path} </li>
+                <li> <img src={baseImgURL + movies.backdrop_path}/> </li>
                 <li> {movies.original_title} </li>
                 <li>{movies.overview}</li>
               </div>)}
