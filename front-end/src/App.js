@@ -5,17 +5,17 @@ import { callAPI } from './services/apiServices'
 
 class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
-      this.state ={
-        movie:[]
-      }
+    this.state = {
+      movie: [{ backdrop_path: "hey" }]
+    }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     callAPI().then(response => {
-      this.setState({movie: response})
-  });
+      this.setState({ movie: response.results })
+    });
   }
 
   render() {
@@ -25,13 +25,21 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-
-      {console.log(this.state)}
-
+        <div>
+          <ul>
+            {this.state.movie.map(movies =>
+              <div>
+                <li> {movies.backdrop_path} </li>
+                <li> {movies.original_title} </li>
+                <li>{movies.overview}</li>
+              </div>)}
+          </ul>
+        </div>
+        {console.log(this.state)}
         {console.log("Front end server started")}
       </div>
     );
   }
 }
 
-export default App;
+export default (App);
