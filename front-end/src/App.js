@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { callAPI } from './services/apiServices'
+import Movie from './components/Movies'
 
 class App extends Component {
 
@@ -19,7 +20,6 @@ class App extends Component {
   }
 
   render() {
-    let baseImgURL = "https://image.tmdb.org/t/p/w185_and_h278_bestv2"
     return (
       <div className="App">
         <header className="App-header">
@@ -27,17 +27,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div>
-          <ul>
-            {this.state.movie.map(movies =>
-              <div>
-                <li> <img src={baseImgURL + movies.backdrop_path}/> </li>
-                <li> {movies.original_title} </li>
-                <li>{movies.overview}</li>
-              </div>)}
-          </ul>
+              <Movie movie={this.state.movie} />
         </div>
         {console.log(this.state)}
-        {console.log("Front end server started")}
       </div>
     );
   }
