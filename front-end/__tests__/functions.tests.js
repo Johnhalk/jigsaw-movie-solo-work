@@ -1,9 +1,9 @@
-import { sayHello } from '../src/services/stateFunctions';
+// import { sayHello } from '../src/services/stateFunctions';
 
-test('greets the makers', () => {
-  const greeting = sayHello();
+// test('greets the makers', () => {
+//   const greeting = sayHello();
 
-  expect(greeting).toEqual(
-    '🔫 💣 🔎 🎈 🎁 🔥'
-  );
-});
+//   expect(greeting).toEqual(
+//     '🔫 💣 🔎 🎈 🎁 🔥'
+//   );
+// });

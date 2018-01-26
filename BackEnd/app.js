@@ -8,6 +8,14 @@ const index = require('./routes/index');
 
 const app = express();
 
+var port = process.env.PORT || 3000;
+
+app.set(port)
+app.listen(app.get('port'),
+function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
