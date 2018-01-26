@@ -9,15 +9,27 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movie: [ ]
+      movie: [],
+      searchFilterInput: 'Jack'
     }
   }
 
   componentDidMount() {
-    callAPI().then(response => {
+    callAPI(this.state.searchFilterInput).then(response => {
       this.setState({ movie: response.results })
     });
   }
+
+  handleSearchFilterInput = ({ target: { value: searchFilterInput } }) => {
+    this.setState({ searchFilterInput });
+  };
+
+  handleSearchRequest = (searchFilterInput) => {
+    callAPI(this.state.searchFilterInput).then(response => {
+      this.setState({ movie: response.results })
+    });
+  }
+
 
   render() {
     return (
@@ -27,7 +39,13 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div>
-              <Movie movie={this.state.movie} />
+          <input type="text" className="search-filter" onChange={this.handleSearchFilterInput}
+            value={this.state.searchFilterInput} placeholder="Search your favourite movie !" />
+          <button type="search-button" onClick={this.handleSearchRequest
+            .bind(this)}>Search</button>
+
+
+          <Movie movie={this.state.movie} />
         </div>
         {console.log(this.state)}
       </div>
