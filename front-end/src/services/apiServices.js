@@ -1,12 +1,17 @@
+import config from '../config'
 const { Response } = require('whatwg-fetch');
 
+let apiKey= config.apiKey
+let baseUrl = config.baseUrl
+
+
 export function callAPI() {
-    var request = new Request('https://api.themoviedb.org/3/search/movie?api_key=121486b23802e0b6735125ff1892f340&query=Jack+Reacher', {
+    console.log(config)
+    var request = new Request(`${baseUrl}search/movie?api_key=${apiKey}&query=Jack+Reacher`, {
       method: 'GET',
       mode: 'cors',
       headers: new Headers({
         "Content-Type": "application/json",
-        // "api_key": "121486b23802e0b6735125ff1892f340"
       })
     });
     return fetch(request)
