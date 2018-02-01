@@ -82,14 +82,4 @@ The schema that you will need to follow for persisting the data is:
 }
 ```
 
-### "Just keep swimming" - Dori, Fish.
-On that note, what are we looking for...
-- Well crafted, well tested code
-- Clean, object oriented design
-- How you approach the problem?
-- How do you interact with your pair?
-- Can you push the boundaries of your knowledge?
-- How do you deliver to a brief within a short time window?
-- Are you having fun?
-
 
