@@ -66,7 +66,7 @@ Feel free to explore your Javascript imagination but don't get bogged down tryin
 
 
 ### “I’m having an old friend for dinner” - Dr. Hannibal Lectre Ph.D. 
-So let's talk persistence... For this challenge, the client has asked that the database table follow a particular schema so that it can be integrated into a further set out 'Top 5' style lists.  
+So let's talk persistence... the database table will follow a particular schema so that it can be integrated into a further set out 'Top 5' style lists.  
 
 The schema that you will need to follow for persisting the data is:
 
