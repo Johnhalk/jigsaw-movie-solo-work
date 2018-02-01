@@ -9,7 +9,7 @@ export function callAPI(searchQuery) {
       method: 'GET',
       mode: 'cors',
       headers: new Headers({
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       })
     });
     return fetch(request)

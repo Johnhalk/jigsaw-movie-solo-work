@@ -1,8 +1,5 @@
-# ![JIGSAW.xyz](BackEnd/public/images/JigsawLogo.png "made you look")
 
-## Welcome to Movie Night at Jigsaw.xyz
-Thanks for applying - we're excited to see you! Without further ado, here's today's challenge. Get stuck in and enjoy yourselves.
-
+## Welcome to Movie Night
 
 ### “Roads?  Where we're going we don't need roads.” - Dr. Emmet Brown Ph.D. 
 So what do we want you to do? Here are some User Stories to get you started:
@@ -57,7 +54,7 @@ Dynamically update my rankings
 
 
 ### "That’ll do, pig, that’ll do" - Arthur Hoggett, Farmer
-Our pre-made stack in this repo is React, Express and MongoDb. The repo is split into 2 folders, front_end for the client side app and BackEnd for the server side.  
+Our stack in this repo is React, Express and MongoDb. The repo is split into 2 folders, front_end for the client side app and BackEnd for the server side.  
 
 Clone it, have a look around, run ```npm i``` in both folders and get building safe in the knowledge that the config is done.  
 
