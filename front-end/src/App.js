@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { callAPI } from './services/apiServices'
-import Movie from './components/Movies'
+import Movie from './components/movie'
 
 class App extends Component {
 
