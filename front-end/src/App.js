@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       movie: [],
-      searchFilterInput: 'Jack'
+      searchFilterInput: 'Jack Reacher'
     }
   }
 
